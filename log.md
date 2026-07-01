@@ -35,3 +35,10 @@ Where I got stuck:
 1. string input, stuck around 5 min, I forgot about the "datatype(input("something something trallalelo trallala"))"
 
 What I understand now that I didn't this morning:
+
+1. try/except in Python — instead of crashing when a user
+   types something wrong, I can catch the specific error
+   and handle it myself
+2. variables are labels pointing to a box in memory, not
+   the box itself — two variables can point to the same
+   box, which is why modifying one can affect the other
