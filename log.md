@@ -24,6 +24,11 @@ What I built:
 3. Control flow, asks for a correct number to end an infinite loop, with a little bit of spice and rage bait [ts-1-4-week1.py](day1\ts-1-4-week1.py)
 4. Celcius to fahrenheit vice versa calculator. [ts-1-5-week1.py](day1\ts-1-5-week1.py)
 5. which year do I turn 100 calculator [ts-1-6-week1.py](day1\ts-1-6-week1.py)
+6. f-string examples [ts-1-7-week1.py](day1\ts-1-7-week1.py)
+7. types extraction funciton examples [ts-1-8-week1.py](day1\ts-1-8-week1.py)
+8. find larger num [ts-1-9-week1.py](day1\ts-1-9-week1.py)
+9. Min to hour and min conversion with modulo[ts-1-10-week1.py](day1\ts-1-10-week1.py)
+10. first project. guessing randomly generated number game. [p-1-guessing-game.py](projects\p-1-guessing-game.py)
 
 Where I got stuck:
 

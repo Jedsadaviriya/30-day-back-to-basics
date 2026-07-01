@@ -1,0 +1,8 @@
+print("so. tell me more about yourself")
+print("what's your full name again?")
+fname = input("Name: ")
+print(f"oh so, {fname} is that it? nice, and how old are you?")
+age = input("Age: ")
+print(f"same I am {age} too")
+city = input("City: ")
+print(f"well anyway, nice to meet you {fname}, very unique name you here there. never heard of it, I don't like that city, I've been to {city} before, it's actually this year when I just turned {age} ")
