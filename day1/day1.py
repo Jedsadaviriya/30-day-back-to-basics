@@ -28,4 +28,3 @@ b.append(4)
 print(a) # it should print [1,2,3,4] out if I did things correctly 
 # because a and b are both references to the same list in memory.
 
-print(1 + 2)
