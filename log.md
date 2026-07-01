@@ -19,10 +19,11 @@ What I built:
 
 ### scripts
 
-1. ask user for name, greets them, ask for 2 numbers, shows sum, difference, product and quotient of the two numbers
-2. simple example for +, -, \* and /
-3. Control flow, asks for a correct number to end an infinite loop, with a little bit of spice and rage bait
-4. Celcius to fahrenheit vice versa calculator.
+1. ask user for name, greets them, ask for 2 numbers, shows sum, difference, product and quotient of the two numbers [ts-1-1-week1.py](day1\ts-1-1-week1.py)
+2. simple example for +, -, \* and /[ts-1-3-week1.py](day1\ts-1-3-week1.py)
+3. Control flow, asks for a correct number to end an infinite loop, with a little bit of spice and rage bait [ts-1-4-week1.py](day1\ts-1-4-week1.py)
+4. Celcius to fahrenheit vice versa calculator. [ts-1-5-week1.py](day1\ts-1-5-week1.py)
+5. which year do I turn 100 calculator [ts-1-6-week1.py](day1\ts-1-6-week1.py)
 
 Where I got stuck:
 
