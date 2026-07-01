@@ -22,6 +22,7 @@ What I built:
 1. ask user for name, greets them, ask for 2 numbers, shows sum, difference, product and quotient of the two numbers
 2. simple example for +, -, \* and /
 3. Control flow, asks for a correct number to end an infinite loop, with a little bit of spice and rage bait
+4. Celcius to fahrenheit vice versa calculator.
 
 Where I got stuck:
 
