@@ -114,3 +114,48 @@ What I understand now that I didn't this morning:
 Not finished — carrying into tomorrow:
 
 1. count vowels (no .count()) and palindrome check. didn't reach either tonight, ran out of time. still the last items on the Week 1 MVP checklist
+
+## Skipped — 4-6.July.2026
+
+took a few days off, birthday. logging it as skipped instead of pretending it didn't happen or renumbering. the day count keeps going by session, not by calendar, so the next working session is still Day 4.
+
+## Day 4 — 7.July.2026
+
+Goal:
+
+close out the Week 1 carryover (vowel count + palindrome, still no built-in shortcuts), then start something bigger. ended up rolling straight into a contact book project.
+
+What I built:
+
+### functions
+
+1. vowelcounter(s). counts vowels in a string by walking it and checking membership against a vowels list. returns an int, the sentence building happens outside at the call site [ts-4-1-week1.py](day4\ts-4-1-week1.py)
+2. is_palindrome(s). reuses Day 3's reverse_string() and compares the reverse to the original, returns a boolean. had to copy-paste reverse_string in instead of importing it, because Python module names can't have dashes and my daily files are named like ts-3-1-week1.py [ts-4-2-week1.py](day4\ts-4-2-week1.py)
+
+### projects
+
+3. contact book. nested dict (name goes to {phone, email}), built to be command-loop driven instead of hardcoded. got all four CRUD functions done and tested by hand: add_contact (case-insensitive key, with a y/n/else overwrite-or-cancel loop if the name already exists), lookup_contact (returns the nested dict or a "doesn't exist" string), delete_contact (uses del to actually remove the key), list_contacts (builds a list of "name: info" strings). the command loop that ties them together is not done yet [p-4-contactbook.py](projects\p-4-contactbook.py)
+
+also wrote a throwaway joke function is_forever_love(p1, p2) mid-session, case-insensitive name check using and/or. got the operator precedence right first try. not saved, just messing around.
+
+Where I got stuck:
+
+1. is vs in vs == confusion, over and over. showed up in the vowel counter, again in palindrome, and again in the contact book. resolution time got shorter each round though, so it's sinking in
+2. the return-vs-print bug is still following me. hit x = print(...) again in the vowel counter, in lookup_contact's else branch, and in the side quest. caught them faster each time
+3. palindrome with in gave me false confidence. tests "passed" because a string is always a substring of itself, so it looked correct for the wrong reason. only caught it by testing a partial-overlap case like "abcabc". switched to ==
+4. add_contact had input() sitting outside the confirmation while loop, so the re-prompt never actually re-asked. same category as Day 3's return-inside-loop, a placement/scope mistake not a syntax one
+5. assumed setting a contact to "" would delete it. it just blanks the value and leaves the key. that's how I found out about del
+6. list_contacts was the messy one. went through return-inside-loop (only returned the first contact), then overwriting one results variable each pass, then a doubling bug (results = results + results), before landing on results = [] before the loop plus .append() each pass
+
+What I understand now that I didn't this morning:
+
+1. is vs in vs == are three different questions. identity vs membership vs value equality. is on small strings/ints seems to work because of interning, right up until it silently doesn't, so it's the wrong tool for "are these equal"
+2. nested dictionaries. a dict value can be another dict, and you reach into it by chaining like contacts["alice"]["phone"]
+3. dicts are mutable and passed by reference. modifying a dict inside a function is visible outside without returning anything, different from reassigning a plain int or string
+4. del removes a key entirely, setting a value to "" only blanks it
+5. for key in contacts iterates the keys by default, .items() gives you key and value together
+6. a y/n validation loop only works if the input() is inside the loop. asked once before the loop, bad input traps you with no way to fix it
+
+Not finished — carrying into tomorrow:
+
+1. the contact book command loop, the add/lookup/delete/list/quit dispatch that turns the four functions into an actual runnable program. that's the remaining piece
